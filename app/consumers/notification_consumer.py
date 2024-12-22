@@ -12,7 +12,7 @@ logger = get_logger(__name__)
 
 async def handle_incoming_message(raw_message: str) -> None:
     """
-    Обрабатывает входящее сообщение, проверяет его валидность с помощью Pydantic 
+    Обрабатывает входящее сообщение, проверяет его валидность с помощью Pydantic
     и вызывает соответствующую бизнес-логику для отправки уведомлений.
 
     :param raw_message: Строка в формате JSON, полученная из очереди.
@@ -44,7 +44,7 @@ async def handle_incoming_message(raw_message: str) -> None:
 
 async def consume() -> None:
     """
-    Подключается к очереди RabbitMQ, ожидает входящие сообщения 
+    Подключается к очереди RabbitMQ, ожидает входящие сообщения
     и передаёт их на обработку в handle_incoming_message.
 
     :return: None

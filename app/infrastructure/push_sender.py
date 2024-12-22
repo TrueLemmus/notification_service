@@ -17,7 +17,7 @@ class PushSender(Sender):
 
     def __init__(self, credential_path: str = "serviceAccountKey.json") -> None:
         """
-        Инициализирует Firebase-приложение, используя сервисный аккаунт 
+        Инициализирует Firebase-приложение, используя сервисный аккаунт
         из указанного файла.
 
         :param credential_path: Путь к файлу с сервисным аккаунтом Firebase.
