@@ -1,5 +1,8 @@
 from models.notification_event import NotificationEvent
 from infrastructure.base_sender import Sender
+from logger_helper import get_logger
+
+logger = get_logger(__name__)
 
 
 class EmailSender(Sender):
@@ -9,5 +12,5 @@ class EmailSender(Sender):
 
     async def send(self, notification: NotificationEvent):
         # Заглушка отправки email
-        print(f'[EmailSender] Sending email to user_id={notification.user_id},'
-              f'subject={notification.subject}, body={notification.message}')
+        logger.info(f'[EmailSender] Sending email to user_id={notification.user_id},'
+                    f'subject={notification.subject}, body={notification.message}')

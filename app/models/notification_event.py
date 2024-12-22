@@ -10,6 +10,10 @@ class NotificationEvent(BaseModel):
         ...,
         description="ID пользователя, которому отправляется уведомление"
     )
+    device_token: Optional[str] = Field(
+        default_factory=lambda: None,
+        description="Токен устройства"
+    )
     message: str = Field(
         ...,
         min_length=1,

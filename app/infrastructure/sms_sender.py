@@ -1,5 +1,8 @@
 from infrastructure.base_sender import Sender
 from models.notification_event import NotificationEvent
+from logger_helper import get_logger
+
+logger = get_logger(__name__)
 
 
 class SMSSender(Sender):
@@ -9,4 +12,4 @@ class SMSSender(Sender):
 
     async def send(self, notification: NotificationEvent):
         # Заглушка отправки SMS
-        print(f"[SMSSender] Sending SMS to user_id={notification.user_id}, body={notification.message}")
+        logger.info(f"[SMSSender] Sending SMS to user_id={notification.user_id}, body={notification.message}")
