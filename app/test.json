@@ -1,5 +1,5 @@
 {
     "user_id": 1,
     "message": "Test massage",
-    "notification_type": ["sms"]
+    "notification_type": ["email"]
 }

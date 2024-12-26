@@ -1,6 +1,6 @@
 ### Запуск основного приложения 
 ```bash
-uvicorn app.main:app --reload
+uvicorn main:app --reload
 ```
 ### Запуск RabbitMQ
 ```bash
